@@ -1,4 +1,6 @@
 //assegno le variabili al DOM
+const name = document.getElementById('name')
+const result = document.getElementById('result')
 const kmField = document.getElementById('kmField')
 const ageField = document.getElementById('ageField')
 const generate = document.getElementById('generate')
@@ -19,8 +21,13 @@ generate.addEventListener('click', () => {
   }else if(ageField.value === 'over65'){
       prezzoFinale = prezzoBiglietto * (1 - scontoOver65 / 100);
   }
-  prezzoTest.innerHTML = prezzoFinale.toFixed(2);
-  console.log(prezzoTest.innerHTML)
+  
+  console.log(prezzoFinale)
+
+  //DISPLAY CARD IL TUO BIGLIETTO
+  result.classList.toggle('d-none')
+
+
 })
 
 

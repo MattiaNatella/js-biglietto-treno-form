@@ -15,15 +15,21 @@
 
   <main>
     <!-- FORM INSERIMENTO DATI -->
+   
     <form action="#">
-      <div class="container border border-primary rounded p-4 my-5">
+      <div id="dati" class="container border border-primary rounded p-4 my-3">
+        <h1 class="text-center text-primary">Inserisci i tuoi dati personali</h1>
         <div class="row align-items-center">
           <div class="col">
-            <label class="d-block p-1 fw-bold">Chilometri da percorrere</label>
+            <label class="d-block p-1 fw-bold text-primary">Nome e Cognome</label>
+            <input id="name" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci qui nome completo" >
+          </div>
+          <div class="col">
+            <label class="d-block p-1 fw-bold text-primary">Chilometri da percorrere</label>
             <input id="kmField" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci i km" >
           </div>
           <div class="col">
-            <label class="d-block p-1 fw-bold">Et&aacute; del passeggero</label>
+            <label class="d-block p-1 fw-bold text-primary">Et&aacute; del passeggero</label>
             <select id="ageField" class="form-select bg-primary bg-opacity-10 border-info border-start-0 border-end-0" aria-label="Default select example">
               <option selected>Seleziona età</option>
               <option value="minorenne">Minorenne</option>
@@ -31,31 +37,40 @@
               <option value="over65">Over 65</option>
             </select>
           </div>
-          <div class="d-grid gap-2 d-md-block my-3">
+          <div class="d-flex justify-content-center gap-2 my-3">
             <button id="generate" class="btn btn-primary" type="button">Genera</button>
             <button id="reset"class="btn btn-primary" type="button">Annulla</button>
           </div>
         </div> 
     </form> 
-      <!-- CARD VISUALIZZAZIONE DATI -->
-      <div class="card border-primary mb-3 d-none">
-         <div class="card-header bg-warning">Dettagli Passeggero</div>
-          <div class="row">
-            <div class="card-body col border">
-              <h5 class="card-title">Info card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="card-body col border">
-              <h5 class="card-title">Info card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="card-body col border">
-              <h5 class="card-title">Info card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
     </div>
+
+     <!-- CARD VISUALIZZAZIONE DATI -->
+    
+     <form action="#">
+       <div id="result" class="container border border-primary d-none rounded p-4 my-5">
+        <h1 class="text-center text-primary">IL TUO BIGLIETTO</h1>
+         <div class="row align-items-center">
+           <div class="col">
+             <label class="d-block p-1 fw-bold text-primary">Nome e Cognome</label>
+             <input id="name" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci qui nome completo" >
+           </div>
+           <div class="col">
+             <label class="d-block p-1 fw-bold text-primary">Chilometri da percorrere</label>
+             <input id="kmField" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci i km" >
+           </div>
+           <div class="col">
+             <label class="d-block p-1 fw-bold text-primary">Et&aacute; del passeggero</label>
+             <select id="ageField" class="form-select bg-primary bg-opacity-10 border-info border-start-0 border-end-0" aria-label="Default select example">
+               <option selected>Seleziona età</option>
+               <option value="minorenne">Minorenne</option>
+               <option value="maggiorenne">Maggiorenne</option>
+               <option value="over65">Over 65</option>
+             </select>
+           </div>
+         </div> 
+     </form> 
+     </div>
  
   </main>
 

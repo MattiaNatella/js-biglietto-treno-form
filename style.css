@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 98vh;
+    background-color: rgb(255, 255, 255, 0.4);
+    background:
+     linear-gradient(135deg,green,white,red)
+     no-repeat
+     top left / cover;
+    color: black;
+}
+
+h1 {
+
+}
+
+.container {
+  margin-top: 5px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.8px);
+/* -webkit-backdrop-filter: blur(4.8px);
+border: 1px solid rgba(255, 255, 255, 0.69);
+box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4,
+0 0 25px #03e9f4, 0 0 100px #03e9f4; */
+}
+
+#result:hover {
+  transition: 0.1s ease;
+  -webkit-box-reflect: below
+  1px linear-gradient(transparent,#000500);
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4,
+              0 0 25px #03e9f4, 0 0 100px #03e9f4;
+}
+
+#dati:hover {
+  transition: all .1s ease;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4,
+              0 0 25px #03e9f4, 0 0 100px #03e9f4;
+}
+
+#generate:focus{
+  transition: 1s ease;
+  transform: rotateX(360deg);
+}
+
+
+#reset:focus{
+  transition: 1s ease;
+  transform: rotateX(360deg);
+}
