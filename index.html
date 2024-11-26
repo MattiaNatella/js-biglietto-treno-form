@@ -50,24 +50,36 @@
      <form action="#">
        <div id="result" class="container border border-primary d-none rounded p-4 my-5">
         <h1 class="text-center text-primary">IL TUO BIGLIETTO</h1>
+        <div class="card-header border-bottom border-2 border-primary text-primary fw-bold">
+          DETTAGLIO PASSEGGERI
+        </div>
          <div class="row align-items-center">
-           <div class="col">
-             <label class="d-block p-1 fw-bold text-primary">Nome e Cognome</label>
-             <input id="name" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci qui nome completo" >
-           </div>
-           <div class="col">
-             <label class="d-block p-1 fw-bold text-primary">Chilometri da percorrere</label>
-             <input id="kmField" class="bg-primary bg-opacity-10 border-info border-start-0 border-end-0 form-control"type="text" name="km" placeholder="Inserisci i km" >
-           </div>
-           <div class="col">
-             <label class="d-block p-1 fw-bold text-primary">Et&aacute; del passeggero</label>
-             <select id="ageField" class="form-select bg-primary bg-opacity-10 border-info border-start-0 border-end-0" aria-label="Default select example">
-               <option selected>Seleziona età</option>
-               <option value="minorenne">Minorenne</option>
-               <option value="maggiorenne">Maggiorenne</option>
-               <option value="over65">Over 65</option>
-             </select>
-           </div>
+          <table class="table ">
+            <thead>
+              <tr>
+                <th>NOME</th>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice CP</th>
+                <th>Costo Biglietto</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th id="ticketName" scope="row"></th>
+                <td id="ticketOffer" class="fw-bold"></td>
+                <td id="ticketCarroz"></td>
+                <td id="ticketCpCode"></td>
+                <td id="ticketPrice"></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+            </tbody>
+          </table>
+         
+          
          </div> 
      </form> 
      </div>
