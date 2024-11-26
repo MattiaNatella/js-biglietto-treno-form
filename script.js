@@ -22,16 +22,14 @@ generate.addEventListener('click', () => {
 
   const prezzoBiglietto = kmField.value * 0.21;
   let prezzoFinale = prezzoBiglietto 
-  let message = ''
+  let message = 'Prezzo Intero'
   if(ageField.value === 'minorenne'){
-    prezzoFinale = prezzoBiglietto * (1 - scontoMinorenni / 100)
+    prezzoFinale *= 1 - scontoMinorenni / 100
     message = 'Sconto Minorenne'
    
   }else if(ageField.value === 'over65'){
       prezzoFinale = prezzoBiglietto * (1 - scontoOver65 / 100);
       message = 'Sconto Over 65'
-  } else {
-    message = 'Prezzo Intero'
   }
   
   console.log(prezzoFinale)
@@ -42,7 +40,7 @@ generate.addEventListener('click', () => {
   tName.innerHTML = name.value
   tOffer.innerText = message
   tCarroz.innerText = Math.ceil(Math.random()*10);
-  tCpCode.innerText = '16TNRM'
+  tCpCode.innerText = getRandomNumber(10000,1000000)
   tPrice.innerText = prezzoFinale.toFixed(2) + '€'
 
 })
@@ -63,4 +61,8 @@ reset.addEventListener('click', () => {
 
 })
 
+//FUNCTIONS
 
+function getRandomNumber(min,max) {
+  return Math.floor(Math.random() * (max - min +1) - min)
+  }
