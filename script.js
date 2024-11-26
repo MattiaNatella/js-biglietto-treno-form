@@ -4,7 +4,7 @@ const result = document.getElementById('result')
 const kmField = document.getElementById('kmField')
 const ageField = document.getElementById('ageField')
 const generate = document.getElementById('generate')
-const reset = document.getElementById('generate')
+const reset = document.getElementById('reset')
 
 //assegno variabili area IL TUO BIGLIETTO
 let tName = document.getElementById('ticketName')
@@ -22,11 +22,16 @@ generate.addEventListener('click', () => {
 
   const prezzoBiglietto = kmField.value * 0.21;
   let prezzoFinale = prezzoBiglietto 
+  let message = ''
   if(ageField.value === 'minorenne'){
     prezzoFinale = prezzoBiglietto * (1 - scontoMinorenni / 100)
+    message = 'Sconto Minorenne'
    
   }else if(ageField.value === 'over65'){
       prezzoFinale = prezzoBiglietto * (1 - scontoOver65 / 100);
+      message = 'Sconto Over 65'
+  } else {
+    message = 'Prezzo Intero'
   }
   
   console.log(prezzoFinale)
@@ -35,10 +40,26 @@ generate.addEventListener('click', () => {
   result.classList.toggle('d-none')
 
   tName.innerHTML = name.value
-  tOffer.innerText = (ageField.value === 'minorenne') ? 'Sconto minorenne' : 'Prezzo intero'
+  tOffer.innerText = message
   tCarroz.innerText = Math.ceil(Math.random()*10);
   tCpCode.innerText = '16TNRM'
   tPrice.innerText = prezzoFinale.toFixed(2) + '€'
+
+})
+
+reset.addEventListener('click', () => {
+ 
+  result.classList.toggle('d-none')
+
+  name.value = ''
+  kmField.value = ''
+  ageField.value = ''
+ 
+  tName.innerText = ''
+  tOffer.innerText = ''
+  tCarroz.innerText = ''
+  tCpCode.innerText = ''
+  tPrice.innerText = ''
 
 })
 
